@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.ScoreMapper">
+
+    <select id="queryScore" resultType="int">
+        SELECT score FROM t_score WHERE student_id = #{score.studentId} AND leason_id = #{score.leasonId}
+    </select>
+
+    <select id="listAll" resultMap="pw.Score">
+        SELECT * FROM t_score
+    </select>
+
+    <insert id="insertScore">
+        INSERT INTO t_score (student_id, leason_id, score) VALUES(#{score.studentId}, #{score.leasonId}, #{score.score})
+    </insert>
+</mapper>

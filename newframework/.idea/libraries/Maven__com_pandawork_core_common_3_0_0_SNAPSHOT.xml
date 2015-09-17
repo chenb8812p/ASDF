@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.pandawork.core:common:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../apache-maven-3.3.1/maven_repo/com/pandawork/core/common/3.0.0-SNAPSHOT/common-3.0.0-20150324.142705-10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../apache-maven-3.3.1/maven_repo/com/pandawork/core/common/3.0.0-SNAPSHOT/common-3.0.0-20150324.142705-10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../apache-maven-3.3.1/maven_repo/com/pandawork/core/common/3.0.0-SNAPSHOT/common-3.0.0-20150324.142705-10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

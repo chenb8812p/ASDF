@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.LeasonMapper">
+
+    <select id="listAll" resultMap="pw.Leason">
+        SELECT *FROM t_leason
+    </select>
+    <select id="queryById" resultMap="pw.Leason">
+        SELECT * FROM t_leason WHERE id = #{id}
+    </select>
+    <update id="update">
+        UPDATE t_leason
+        SET leason_name = #{leason.leasonName},
+        teacher = #{leason.teacher}
+        WHERE id = #{leason.id}
+    </update>
+    <select id="queryByName" resultMap="pw.Leason">
+        SELECT * FROM t_leason WHERE leason_name = #{name}
+    </select>
+</mapper>

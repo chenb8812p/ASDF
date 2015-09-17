@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.StudentMapper">
+    <insert id="newStu">
+        INSERT INTO t_student (stu_name, grade, class_id) VALUES(#{student.stuName}, #{student.grade}, #{student.classId})
+    </insert>
+    <delete id="delStu">
+        DELETE FROM t_student WHERE stu_name = #{stuName}
+    </delete>
+    <select id="listAll" resultMap="pw.Student">
+        SELECT * FROM t_student
+    </select>
+    <select id="queryByName" resultMap="pw.Student">
+        SELECT * FROM t_student WHERE stu_name = #{stuName}
+    </select>
+
+    <select id="queryListByName" resultMap="pw.Student">
+        SELECT * FROM t_student WHERE stu_name LIKE "%"#{stuName}"%"
+    </select>
+    <select id="queryById" resultMap="pw.Student">
+        SELECT * FROM t_student WHERE id = #{id}
+    </select>
+</mapper>
