@@ -105,7 +105,6 @@ public class UserServiceImpl implements UserService {
         if (Assert.isNull(user)) {
             return false;
         }
-
         try {
             user.setPassword(CommonUtil.md5(user.getPassword()));
             return userMapper.countByUserNameAndPassword(user.getUserName(), user.getPassword()) > 0 ? true : false;
