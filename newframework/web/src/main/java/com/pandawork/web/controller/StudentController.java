@@ -23,7 +23,6 @@ public class StudentController extends AbstractController {
     public String toStudent(Model model) throws Exception {
         List<Student> list = new ArrayList<Student>();
         list = studentService.listAll();
-
         model.addAttribute("list",list);
         return "Student";
     }

@@ -30,11 +30,9 @@ public class UserServiceImpl implements UserService {
         if (Assert.isNull(user)) {
             return ;
         }
-
         // 判断用户名和密码是否为空
         Assert.isNotNull(user.getUserName(), NFException.UserNameNotNull);
         Assert.isNotNull(user.getPassword(), NFException.PasswordNotNull);
-
         try {
             user.setPassword(CommonUtil.md5(user.getPassword()));
             userMapper.newUser(user);
@@ -50,12 +48,12 @@ public class UserServiceImpl implements UserService {
         if (Assert.isNull(user)) {
             return ;
         }
-
         // 判断用户名和密码是否为空
         Assert.isNotNull(user.getUserName(), NFException.UserNameNotNull);
         Assert.isNotNull(user.getPassword(), NFException.PasswordNotNull);
 
         try {
+            user.setPassword(CommonUtil.md5(user.getPassword()));
             userMapper.update(user);
         } catch (Exception e) {
             LogClerk.errLog.error(e);
